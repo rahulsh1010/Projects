@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="stylesheet" href="RegisterStyle.css" type="text/css">
+</head>
+<body background=https://i.pinimg.com/originals/59/d7/ea/59d7ea20354db45698db6e06951d720a.jpg>
+<div class="main">
+	<div class="register">
+	
+
+		<h3>Registration</h3>
+		<form id="myform" class="form-3" method= "post" action= "RegistrationServlet">
+		<p>
+			<label for="Username">Username</label>
+			<br>
+			<br>
+			<input type="text" name="Username" id="login" placeholder="Username" required="required">
+			</p>
+			<br>
+			<p>
+			<label for="Name">Name</label>
+			<br>
+			<br>
+			<input type="text" name="Name" id="name" placeholder="Name" required="required">
+			</p>
+			<br>
+			<p>
+			<label for="password">Password</label>
+			<br>
+			<br>
+			<input type="password" name="Password" id="Password" placeholder="Password" required="required">
+		</p>
+		<br>
+			<p>
+			<label for="email">Email</label>
+			<br>
+			<br>
+			<input type="email" name="Email" id="Password" placeholder="Email" required="required">
+		</p>
+		<br>
+		<br>
+		
+		<p> 
+			<input type="submit" name="submit" value="Register" id="submit" onclick="registration()">
+		</p>
+		
+			
+			</form>
+		</div>
+		</div>
+ 
+</body>
+
+ <script>
+    
+    function registration()
+	{
+
+		var uname= document.getElementById("login").value;
+		var name= document.getElementById("name").value;
+		var pwd= document.getElementById("Password").value;		
+		var email= document.getElementById("Password").value;
+		
+        //email id expression code
+		var pwd_expression = /^(?=.?[A-Z])(?=.?[a-z])(?=.?[0-9])(?=.?[#?!@$%^&*-])/;
+		var letters = /^[A-Za-z]+$/;
+		var filter = /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
+
+		if(name=='')
+		{
+			alert('Please enter your name');
+			 return false;                                                                                                                                                                                                                                     
+		}
+		else if(!letters.test(name))
+		{
+			alert('Name field required only alphabet characters');
+			return false;
+		}
+		else if(email=='')
+		{
+			alert('Please enter your user email id');
+			return false;
+		}
+		else if (!filter.test(email))
+		{
+			alert('Invalid email');
+			return false;
+		}
+		
+		else if(pwd=='')
+		{
+			alert('Please enter Password');
+			return false;
+		}
+	//	else if(cpwd=='')
+	//	{
+	//		alert('Enter Confirm Password');
+	//		return false;
+	//	}
+	//	else if(!pwd_expression.test(pwd))
+	//	{
+	//		alert ('Upper case, Lower case, Special character and Numeric letter are required in Password filed');
+	//		return false;
+	//	}
+	//	else if(pwd != cpwd)
+	//	{
+	//		alert ('Password not Matched');
+	//		return false;
+	//	}
+	//	else if(document.getElementById("t5").value.length < 6)
+	//	{
+	//		alert ('Password minimum length is 6');
+	//		return false;
+	//	}
+	//	else if(document.getElementById("t5").value.length > 12)
+	//	{
+	//		alert ('Password max length is 12');
+	//		return false;
+	//	}
+		else
+		{				                            
+               alert('Thank You for Login');
+               return true;
+			   // Redirecting to other page or webste code. 
+			   
+		}
+	}
+    
+    </script>
+</html>

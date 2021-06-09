@@ -1,0 +1,39 @@
+*{
+	margin : 0;
+	padding : 0;
+	
+}
+body { 
+	background-repeat: no-repeat;
+	background-size: cover;
+	
+}
+
+#add{
+	height: 5%;
+	width: 5%;
+	position: absolute;
+	left: 300px;
+	top : 200px;
+
+}
+
+.centered{
+	text-align : center;
+	font-family: sans-serif;
+	font-size: 20px;
+	font-weight:bold;
+	position: absolute;
+  	top: 200%;
+  	left: 100%;
+ 
+}
+
+#addcourt{
+	height: 5%;
+	width: 5%;
+	position: absolute;
+	left: 600px;
+	top : 200px;
+	
+}

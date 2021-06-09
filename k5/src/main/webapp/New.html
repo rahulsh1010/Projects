@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Login</title>
+<link rel="stylesheet" href="RegisterStyle.css" type="text/css">
+
+</head>
+
+
+
+<body background=https://i.pinimg.com/originals/59/d7/ea/59d7ea20354db45698db6e06951d720a.jpg ><!--  background=https://media.timeout.com/images/103834852/750/422/image.jpg>-->
+ <script>
+var Username=document.getElementById("login")
+var password=document.getElementById("Password")
+
+var letters = /^[A-Za-z]+$/;
+var name=Username;
+function validate()
+{
+	 if (Username== " ")
+	 {
+	   alert("Name is mandatory");
+	   return false;
+	 }
+}
+</script>
+	<div class="main">
+	<div class="register">
+	
+
+		<h3>Login</h3>
+	<form id="myform" class="form-3" method= "post" action= "LoginServlet" onsubmit="checkInputs()">
+		<p>
+			<label for="Username">Username</label>
+			<br>
+			<br>
+ 			<input type="text" name="Username" id="login" placeholder="Username"	required="required" >
+ 				</p>
+ 			<br>
+		<p>
+			<label for="password">Password</label>
+			<br>
+			<br>
+			<input type="password" name="Password" id="Password" placeholder="Password" required="required">
+		</p>
+			<br>
+			<br>
+		<p>
+			<input type="submit" name="submit" value="Login" id="submit" onclick="validate()">
+		</p>
+ 	</form>
+ 	</div>
+ 	</div>
+ 	
+ 	
+</body>
+
+
+
+</html>
